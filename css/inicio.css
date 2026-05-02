@@ -254,6 +254,45 @@ body {
 }
 
 /* --- Proyectos --- */
+.entre-seccion {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--dark);
+    padding: 80px 10% 40px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.entre-seccion::after {
+    content: '';
+    display: block;
+    width: 800px;
+    height: 4px;
+    background: var(--primary);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.entre-seccion {
+    background: linear-gradient(to bottom, var(--white), var(--light));
+}
+
+.entre-seccion {
+    scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+    .entre-seccion {
+        padding: 60px 5% 30px;
+        letter-spacing: 1px;
+    }
+    .entre-seccion::after {
+        width: 60%;
+    }
+}
+
 .project-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
